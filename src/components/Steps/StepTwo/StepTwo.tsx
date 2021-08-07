@@ -19,21 +19,30 @@ const valueLabelFormat = (value: number) => {
     return marks.findIndex((mark) => mark.value === value) + 1
 }
 
+
 const StepTwo: React.FC = () => {
+  const [imageBg, setImageBg] = React.useState<number | number[]> (0)
+  const handleChangeImg = (event: React.ChangeEvent<{}>, value: number | number[]) => {
+    setImageBg(value)
+  }
     return (
       <MainDiv>
         <Box>
           <Slider
             aria-label="restricted values"
             defaultValue={0}
+            value={imageBg}
             valueLabelFormat={valueLabelFormat}
             getAriaValueText={valueText}
             step={null}
             valueLabelDisplay="auto"
             marks={marks}
+            onChange={handleChangeImg}
           />
         </Box>
       </MainDiv>
      )
 }
 export default StepTwo
+
+

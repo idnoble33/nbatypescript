@@ -8,6 +8,7 @@ export const StepThreeContainer = styled.div`
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
+    text-align: center;
     /* justify-content: center; */
   }
   button {

@@ -27,4 +27,13 @@ export const Div = styled.div`
     text-align: center;
     margin-top: 1rem
   }
+  .MuiButtonBase-root{
+    background: #fff;
+    align-items: center;
+    width: 80%;
+    margin-top: 2rem;
+    &:hover{
+      background: #fff;
+    }
+  }
   `

@@ -13,7 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000!important;
+  background: #000;
   display: flex;
   justify-content: center;
   /* align-items: center; */

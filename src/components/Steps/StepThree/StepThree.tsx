@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import { StepThreeContainer, ImageDiv } from "./StepThree.style";
 
 type selectTagProps = {
-  updateSelection: any;
+  updateSelection: (area: string) => void;
   selectedTypicalDrive: string[];
 };
+type Ifuel ={
+    value: string;
+    img: string;
+    alt: string;
+}
 const StepThree = ({
   updateSelection,
   selectedTypicalDrive,
 }: selectTagProps) => {
-  const fuelPriority = [
+  const fuelPriority: Ifuel[] = [
     {
       value: "Very important",
       img: "images/veryimportant.jpg",
@@ -26,9 +31,9 @@ const StepThree = ({
       alt: "city-car-image",
     },
   ];
-  const [lastSelectedArea, setLastSelectedArea] = useState(null);
+  const [lastSelectedArea, setLastSelectedArea] = useState<string | null>(null);
 
-  const updatedSelectedArea = (area: any) => {
+  const updatedSelectedArea = (area: Ifuel) => {
     updateSelection(area.value);
     setLastSelectedArea(area.value);
   };
@@ -39,7 +44,7 @@ const StepThree = ({
           <section>A fuel-efficient Vehicle is</section>
         </div>
         <div>
-          {fuelPriority.map((fuel: any, fuelIndex) => (
+          {fuelPriority.map((fuel: Ifuel, fuelIndex) => (
             <ImageDiv key={fuelIndex}>
               <button
                 onClick={() => updatedSelectedArea(fuel)}

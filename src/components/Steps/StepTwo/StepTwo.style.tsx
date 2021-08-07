@@ -10,7 +10,10 @@ export const MainDiv = styled.div`
   }
  .PrivateValueLabel-circle-6 {
     display: none;
-  } 
+  }
+  .MuiSlider-thumb{
+    margin-left: 0px;
+  }
    /*.MuiSlider-thumb {
     padding: 0.5rem;
     background-color: black;
