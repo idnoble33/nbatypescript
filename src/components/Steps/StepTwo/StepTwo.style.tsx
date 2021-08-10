@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const MainDiv = styled.div`
+   /* display: flex; */
   .MuiSlider-markLabel {
     color: #fff;
   }
@@ -8,12 +9,17 @@ export const MainDiv = styled.div`
     margin-top: 23rem;
     width: 80%;
   }
- .PrivateValueLabel-circle-6 {
+  .PrivateValueLabel-circle-8  {
+    width: 0;
+    height: 0;
     display: none;
   }
   .MuiSlider-thumb{
     margin-left: 0px;
+    background-color: black;
+    border: 2px solid white;
   }
+  
    /*.MuiSlider-thumb {
     padding: 0.5rem;
     background-color: black;
@@ -26,5 +32,8 @@ export const MainDiv = styled.div`
 //}
 .white{
   color: #fff;
-} 
+}
+.check{
+  display: flex;
+}
 `

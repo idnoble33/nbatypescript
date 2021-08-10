@@ -36,4 +36,7 @@ export const Div = styled.div`
       background: #fff;
     }
   }
+  .button{
+    display: flex;
+  }
   `
